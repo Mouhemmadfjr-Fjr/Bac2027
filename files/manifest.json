@@ -1,6 +1,11 @@
 {
   "physics-questions": [],
-  "physics-summaries": [],
+  "physics-summaries": [
+    {
+      "name": "الشامل في الفيزياء.docx v30.10-1.pdf",
+      "path": "files/physics/summaries/الشامل في الفيزياء.docx v30.10-1.pdf"
+    }
+  ],
   "physics-exams": [
     {
       "name": "نماذج نواسات شاملة مع الحل .pdf",

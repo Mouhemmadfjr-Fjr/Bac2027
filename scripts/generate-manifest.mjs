@@ -14,7 +14,12 @@ const sections = {
 const manifest = {};
 for (const [id, folder] of Object.entries(sections)) {
   const directory = join(root, folder);
-  const entries = await readdir(directory, { withFileTypes: true });
+  let entries = [];
+  try {
+    entries = await readdir(directory, { withFileTypes: true });
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
   manifest[id] = entries
     .filter((entry) => entry.isFile() && entry.name !== ".gitkeep")
     .sort((a, b) => a.name.localeCompare(b.name, "ar"))
@@ -27,11 +32,15 @@ for (const [id, folder] of Object.entries(sections)) {
 const manifestJson = JSON.stringify(manifest, null, 2);
 await writeFile(join(root, "manifest.json"), `${manifestJson}\n`, "utf8");
 
-const indexPath = "index.html";
-const index = await readFile(indexPath, "utf8");
-const embeddedManifest = JSON.stringify(manifest);
-const updatedIndex = index.replace(
-  /(<script type="application\/json" id="resource-manifest">)[\s\S]*?(<\/script>)/,
-  `$1${embeddedManifest}$2`,
-);
-await writeFile(indexPath, updatedIndex, "utf8");
+try {
+  const indexPath = "index.html";
+  const index = await readFile(indexPath, "utf8");
+  const embeddedManifest = JSON.stringify(manifest);
+  const updatedIndex = index.replace(
+    /(<script type="application\/json" id="resource-manifest">)[\s\S]*?(<\/script>)/,
+    `$1${embeddedManifest}$2`,
+  );
+  await writeFile(indexPath, updatedIndex, "utf8");
+} catch (error) {
+  if (error.code !== "ENOENT") throw error;
+}
