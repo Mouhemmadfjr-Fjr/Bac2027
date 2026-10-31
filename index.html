@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="منصة أستاذ الفيزياء والكيمياء Bac2027 لمشاركة الملفات التعليمية مع الطلاب." />
+    <title> منصة Bac2027 للفيزياء و الكيمياء  </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="brand" href="#home" aria-label="العودة إلى الرئيسية">
+          <span class="brand-mark"><img src="img/elite-icon.svg" alt="ELITE" /></span>
+          <span>Bac2027</span>
+        </a>
+        <div class="nav-links">
+          <a href="#about" data-about-link>عن الأستاذ</a>
+          <a href="#files">الملفات</a>
+          <a href="#announcements">الإعلانات</a>
+        </div>
+        <a class="button button-small" href="#files">تصفح الملفات</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">منصة الفيزياء والكيمياء لطلاب Bac2027</p>
+            <h1>كل ما تحتاجه<br /><span>لرحلتك الدراسية.</span></h1>
+            <p class="hero-text">
+              مرحباً بكم في منصتي التعليمية. ستجدون هنا دروس الفيزياء والكيمياء
+              والملخصات والتمارين والإعلانات المهمة مرتبة في مكان واحد.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#files">استكشف الملفات <span>←</span></a>
+            </div>
+            <div class="hero-stats">
+              <div><strong>01</strong><span>منصة واحدة</span></div>
+              <div><strong>24/7</strong><span>متاحة دائماً</span></div>
+              <div><strong>2027</strong><span>نحو النجاح</span></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <div class="portrait-frame">
+              <img src="img/me.jpeg" alt="صورة الأستاذ" />
+            </div>
+            <div class="floating-note note-top"><span>✦</span> تعلم، تطور، انجح</div>
+            <div class="floating-note note-bottom"><strong>+100</strong><span>مورد تعليمي</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="files" class="section files-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">المكتبة التعليمية</p>
+              <h2>الملفات والموارد</h2>
+            </div>
+            <p>اختر المادة للوصول إلى أحدث الملفات والدروس التعليمية.</p>
+          </div>
+          <div class="file-grid">
+            <details class="subject-card featured" open>
+              <summary class="subject-card-heading"><span class="card-icon">⚛</span><div><small>المادة الأولى</small><h3>مادة الفيزياء</h3></div><span class="subject-toggle" aria-hidden="true">⌄</span></summary>
+              <p>دروس منظمة وموارد عملية تساعدك على إتقان كل محور.</p>
+              <div class="resource-list">
+                <button type="button" data-resource-section="physics-questions"><span>01</span> بنوك الأسئلة <b>←</b></button>
+                <button type="button" data-resource-section="physics-summaries"><span>02</span> النوط والملخصات <b>←</b></button>
+                <button type="button" data-resource-section="physics-exams"><span>03</span> نماذج امتحانية <b>←</b></button>
+              </div>
+            </details>
+            <details class="subject-card">
+              <summary class="subject-card-heading"><span class="card-icon">⚗</span><div><small>المادة الثانية</small><h3>مادة الكيمياء</h3></div><span class="subject-toggle" aria-hidden="true">⌄</span></summary>
+              <p>مفاهيم وتفاعلات وتدريبات مرتبة لتسهيل المراجعة.</p>
+              <div class="resource-list">
+                <button type="button" data-resource-section="chemistry-questions"><span>01</span> بنوك الأسئلة <b>←</b></button>
+                <button type="button" data-resource-section="chemistry-summaries"><span>02</span> النوط والملخصات <b>←</b></button>
+                <button type="button" data-resource-section="chemistry-exams"><span>03</span> نماذج امتحانية <b>←</b></button>
+              </div>
+            </details>
+          </div>
+          <div class="privacy-note"><span>🔒</span> الملفات التعليمية مخصصة لطلاب المنصة. يرجى احترام حقوق النشر وعدم إعادة مشاركة المحتوى.</div>
+        </div>
+      </section>
+
+      <section id="announcements" class="section announcement-section">
+        <div class="container announcement">
+          <div class="announcement-intro">
+            <p class="eyebrow">إعلانات مهمة</p>
+            <h2>ابقَ على اطلاع<br />بكل جديد.</h2>
+            <p class="announcement-help">تابع آخر الدورات والجلسات والمواعيد التعليمية التي يعلن عنها الأستاذ.</p>
+          </div>
+          <div class="announcement-list">
+            <article><span class="date">01<br /><small>أكتوبر</small></span><div class="announcement-body"><small class="announcement-type">تنبيه</small><h3>مرحباً بكم في المنصة</h3><p>سيتم تحديث الدورات والجلسات والملفات بشكل مستمر.</p></div></article>
+            <article><span class="date">قريبًا</span><div class="announcement-body"><small class="announcement-type">تنبيه</small><h3>إعلان جديد قريباً</h3><p>تابع هذه الصفحة لمعرفة آخر الدورات والجلسات.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ad-section" aria-label="مساحة إعلانية">
+        <div class="container ad-placeholder"><span>مساحة إعلانية</span><small>يمكن ربطها لاحقاً بخدمة إعلانات مناسبة</small></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand"><span class="brand-mark"><img src="img/elite-icon.svg" alt="ELITE" /></span><span>Bac2027</span></span>
+          <p>منصة الفيزياء والكيمياء لطلاب البكالوريا العلمية.</p>
+        </div>
+        <div class="footer-social">
+          <span class="footer-social-title">تواصل معنا</span>
+          <div class="social-links" aria-label="روابط التواصل الاجتماعي">
+            <a class="social-link whatsapp" href="https://wa.me/963983344095" target="_blank" rel="noopener noreferrer" aria-label="التواصل عبر واتساب" title="واتساب">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.3-6.1-3.5-8.3ZM12.1 21.5h-.1c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.9 1 1-3.8-.2-.3a9.7 9.7 0 1 1 8.3 4.6Zm5.3-7.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.2-.3-.5.3-.5.8-1.6.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.6s1.2 3 1.4 3.2c.2.2 2.4 3.7 5.8 5.2.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.1-1.3-.2-.1-.4-.2-.7-.4Z"/></svg>
+            </a>
+            <span class="social-link is-coming-soon" aria-label="إنستغرام - قريبًا" title="إنستغرام - قريبًا" aria-disabled="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-dot" cx="17.5" cy="6.5" r="1"/></svg>
+            </span>
+            <span class="social-link is-coming-soon" aria-label="فيسبوك - قريبًا" title="فيسبوك - قريبًا" aria-disabled="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V3.5c-.5-.1-2-.2-3.8-.2-3.8 0-6.4 2.3-6.4 6.6v3.7H3v5h3.8V24h5v-5.4h4.1l.7-5H11.8V10.3c0-1.4.4-2.3 2.2-2.3Z"/></svg>
+            </span>
+          </div>
+        </div>
+        <div class="footer-meta">
+          <span>© 2027 جميع الحقوق محفوظة</span>
+          <a href="#home">العودة للأعلى ↑</a>
+        </div>
+      </div>
+    </footer>
+    <dialog class="about-dialog" data-about-dialog>
+      <button class="dialog-close" type="button" aria-label="إغلاق" data-about-close>×</button>
+      <p class="eyebrow">عن الأستاذ</p>
+      <h2>Bac2027</h2>
+      <div class="about-dialog-copy">
+        <p><strong>العبد الفقير إلى ربه المهندس محمد فجر </strong></p>
+        <p>أستاذ مادتي الفيزياء والكيمياء لطلاب البكالوريا العلمية <strong>Bac2027</strong>.</p>
+        <p>هنا تجدون كل ما تحتاجونه من ملفات وملخصات ونوطات وملاحظات تعليمية خاصة بمادتي الفيزياء والكيمياء، لمساعدتكم على فهم الدروس وتنظيم المراجعة والاستعداد للامتحانات.</p>
+        <p>نسأل الله أن يجعل هذا العمل نافعاً، وأن يرزقنا وإياكم العلم النافع والتوفيق والسداد.</p>
+        <p>كل التوفيق لكم في رحلتكم الدراسية.</p>
+      </div>
+    </dialog>
+    <dialog class="files-dialog" data-files-dialog aria-labelledby="files-dialog-title">
+      <button class="dialog-close" type="button" aria-label="إغلاق" data-files-close>×</button>
+      <p class="eyebrow">المكتبة التعليمية</p>
+      <h2 id="files-dialog-title" data-files-title>الملفات</h2>
+      <div class="files-dialog-body" data-files-dialog-body aria-live="polite"></div>
+    </dialog>
+    <script type="application/json" id="resource-manifest">{"physics-questions":[],"physics-summaries":[],"physics-exams":[{"name":"نماذج نواسات شاملة مع الحل .pdf","path":"files/physics/exams/نماذج نواسات شاملة مع الحل .pdf"}],"chemistry-questions":[],"chemistry-summaries":[],"chemistry-exams":[]}</script>
+    <script src="script.js"></script>
+  </body>
+</html>
