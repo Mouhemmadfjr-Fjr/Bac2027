@@ -110,15 +110,39 @@ document.querySelectorAll("[data-resource-section]").forEach((resource) => {
 loadResourceFiles();
 
 const aboutDialog = document.querySelector("[data-about-dialog]");
-const aboutLink = document.querySelector("[data-about-link]");
+const aboutLinks = document.querySelectorAll("[data-about-link]");
 const aboutClose = document.querySelector("[data-about-close]");
 const filesDialog = document.querySelector("[data-files-dialog]");
 const filesClose = document.querySelector("[data-files-close]");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const siteMenu = document.querySelector("[data-site-menu]");
 
-aboutLink?.addEventListener("click", (event) => {
+aboutLinks.forEach((aboutLink) => aboutLink.addEventListener("click", (event) => {
   event.preventDefault();
+  siteMenu?.classList.remove("is-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
   if (!aboutDialog) return;
   showDialogWithoutMovingPage(aboutDialog);
+}));
+
+menuToggle?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  const isOpen = siteMenu?.classList.toggle("is-open") ?? false;
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+siteMenu?.querySelectorAll("[data-menu-link]").forEach((link) => {
+  link.addEventListener("click", () => {
+    siteMenu.classList.remove("is-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (siteMenu?.classList.contains("is-open") && !siteMenu.contains(event.target) && event.target !== menuToggle) {
+    siteMenu.classList.remove("is-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  }
 });
 
 aboutClose?.addEventListener("click", () => {
