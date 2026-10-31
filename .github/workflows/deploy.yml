@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -31,6 +31,15 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Generate files manifest on every push
         run: node ./scripts/generate-manifest.mjs
+      - name: Save generated manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- files/manifest.json index.html)" ]; then
+            git add files/manifest.json index.html
+            git commit -m "Update generated file manifest [skip ci]"
+            git push
+          fi
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
