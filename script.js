@@ -20,9 +20,9 @@ function resourceFileMarkup(files) {
     const link = document.createElement("a");
     link.className = "resource-file";
     link.href = file.path;
-    link.target = "_blank";
+    link.download = file.name;
     link.rel = "noopener";
-    link.innerHTML = `<span>${String(index + 1).padStart(2, "0")}</span><strong></strong><b>فتح الملف ↗</b>`;
+    link.innerHTML = `<span>${String(index + 1).padStart(2, "0")}</span><strong></strong><b>تحميل الملف ↓</b>`;
     link.querySelector("strong").textContent = file.name;
     list.append(link);
   });
